@@ -29,7 +29,7 @@ const Footer: React.FC = () => {
       </div>
       <div className="footer__bar">
         <div className="container">
-          <p>© {new Date().getFullYear()} KeedCo. POWERED BY the GRACE of GOD.</p>
+          <p>© {new Date().getFullYear()} keedcoltd.com.</p>
         </div>
       </div>
     </footer>
