@@ -139,6 +139,7 @@ input, select, textarea, button { font-family: inherit; }
   align-items: center;
   justify-content: center;
   background: url('/happy.jpg') center/cover no-repeat;
+  background-color: #0d3b38;
   overflow: hidden;
 }
 .hero__overlay {
