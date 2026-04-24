@@ -1,30 +1,12 @@
 import React from 'react';
 
 const CERTS = [
-  {
-    name: 'Microsoft Partner',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/4/44/Microsoft_logo.svg/512px-Microsoft_logo.svg.png',
-  },
-  {
-    name: 'Cisco',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/0/08/Cisco_logo_blue_2016.svg/512px-Cisco_logo_blue_2016.svg.png',
-  },
-  {
-    name: 'CompTIA',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/6/6e/CompTIA_logo.svg/512px-CompTIA_logo.svg.png',
-  },
-  {
-    name: 'ISO 27001',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/d/d0/ISO_logo_%28Red_square%29.svg/512px-ISO_logo_%28Red_square%29.svg.png',
-  },
-  {
-    name: 'Dell Technologies',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Dell_Logo.png/512px-Dell_Logo.png',
-  },
-  {
-    name: 'HP',
-    logo: 'https://upload.wikimedia.org/wikipedia/commons/thumb/a/ad/HP_logo_2012.svg/512px-HP_logo_2012.svg.png',
-  },
+  { name: 'Microsoft Partner', logo: '/Microsoft.jpg' },
+  { name: 'Cisco',             logo: '/Cisco.jpg' },
+  { name: 'CompTIA',           logo: '/CompTIA.jpg' },
+  { name: 'ISO 27001',         logo: '/ISO27001.jpg' },
+  { name: 'Dell Technologies', logo: '/Dell.jpg' },
+  { name: 'HP',                logo: '/hp.jpg' },
 ];
 
 const TrustBar: React.FC = () => (
