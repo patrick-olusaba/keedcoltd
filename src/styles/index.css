@@ -1352,7 +1352,7 @@ input, select, textarea, button { font-family: inherit; }
 .trust-bar {
   background: #f8f9fc;
   border-bottom: 1px solid #e8eaf0;
-  padding: 18px 32px;
+  padding: 28px 32px;
 }
 .trust-bar__inner {
   display: flex;
@@ -1376,7 +1376,7 @@ input, select, textarea, button { font-family: inherit; }
   flex-wrap: wrap;
 }
 .trust-bar__logo img {
-  height: 26px;
+  height: 48px;
   width: auto;
   object-fit: contain;
   filter: grayscale(100%) opacity(0.55);
