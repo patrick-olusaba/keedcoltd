@@ -74,4 +74,5 @@ export type PageId =
   | 'about-us'
   | 'our-work'
   | 'get-started'
-  | 'terms-of-use';
+  | 'terms-of-use'
+  | 'callback';

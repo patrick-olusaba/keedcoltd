@@ -1,15 +1,19 @@
 import { NavItem } from '../types';
 
+export const SERVICE_NAV: NavItem[] = [
+  { label: 'Electrical Infrastructure',  href: 'electrical-cctv' },
+  { label: 'ICT Network Infrastructure', href: 'managed-it' },
+  { label: 'Security Systems',           href: 'electrical-cctv' },
+  { label: 'Connectivity Solutions',     href: 'managed-it' },
+  { label: 'IT Consultancy',             href: 'it-consultancy' },
+  { label: 'Custom Software',            href: 'custom-software' },
+];
+
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Managed IT',                 href: 'managed-it' },
-  { label: 'Electrical & CCTV',           href: 'electrical-cctv' },
-  { label: 'Cybersecurity',               href: 'cybersecurity' },
-  { label: 'Backup & Recovery',           href: 'backup-recovery' },
-  { label: 'IT Consultancy',              href: 'it-consultancy' },
-  { label: 'Custom Software Development', href: 'custom-software' },
-  { label: 'Our Work',                    href: 'our-work' },
-  { label: 'Blog',                        href: 'blog' },
-  { label: 'Get Started',                 href: 'get-started', cta: true },
+  { label: 'Our Work',   href: 'our-work' },
+  { label: 'About Us',   href: 'about-us' },
+  { label: 'Blog',       href: 'blog' },
+  { label: 'Get Started', href: 'get-started', cta: true },
 ];
 
 export const TOP_LINKS: NavItem[] = [

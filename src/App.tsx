@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import Navbar              from './components/layout/Navbar';
 import Footer              from './components/layout/Footer';
 import ResponseGuarantee   from './components/layout/ResponseGuarantee';
@@ -10,6 +10,7 @@ import PortfolioPage   from './components/pages/PortfolioPage';
 import BlogPage        from './components/pages/BlogPage';
 import BlogPostPage    from './components/pages/BlogPostPage';
 import TermsPage      from './components/pages/TermsPage';
+import RequestCallbackPage from './components/pages/RequestCallbackPage';
 import { useRouter }  from './hooks/useRouter';
 
 const SERVICE_KEYS = ['managed-it', 'electrical-cctv', 'cybersecurity', 'backup-recovery', 'it-consultancy', 'custom-software'];
@@ -37,16 +38,31 @@ const ScrollToTop: React.FC = () => {
 
 const App: React.FC = () => {
   const { currentPage } = useRouter();
+  const [displayPage, setDisplayPage] = useState(currentPage);
+  const [fading, setFading] = useState(false);
+  const prevPage = useRef(currentPage);
+
+  useEffect(() => {
+    if (currentPage === prevPage.current) return;
+    setFading(true);
+    const t = setTimeout(() => {
+      setDisplayPage(currentPage);
+      prevPage.current = currentPage;
+      setFading(false);
+    }, 150);
+    return () => clearTimeout(t);
+  }, [currentPage]);
 
   const renderPage = () => {
-    if (currentPage === 'home')          return <HomePage />;
-    if (currentPage === 'about-us')      return <AboutPage />;
-    if (currentPage === 'our-work')      return <PortfolioPage />;
-    if (currentPage === 'blog')          return <BlogPage />;
-    if (currentPage.startsWith('blog-')) return <BlogPostPage slug={currentPage.replace('blog-', '')} />;
-    if (currentPage === 'get-started')   return <GetStartedPage />;
-    if (currentPage === 'terms-of-use')  return <TermsPage />;
-    if (SERVICE_KEYS.includes(currentPage)) return <ServicePage pageKey={currentPage} />;
+    if (displayPage === 'home')          return <HomePage />;
+    if (displayPage === 'about-us')      return <AboutPage />;
+    if (displayPage === 'our-work')      return <PortfolioPage />;
+    if (displayPage === 'blog')          return <BlogPage />;
+    if (displayPage.startsWith('blog-')) return <BlogPostPage slug={displayPage.replace('blog-', '')} />;
+    if (displayPage === 'get-started')   return <GetStartedPage />;
+    if (displayPage === 'terms-of-use')  return <TermsPage />;
+    if (displayPage === 'callback')      return <RequestCallbackPage />;
+    if (SERVICE_KEYS.includes(displayPage)) return <ServicePage pageKey={displayPage} />;
     return <HomePage />;
   };
 
@@ -54,7 +70,7 @@ const App: React.FC = () => {
     <>
       <Navbar />
       <ResponseGuarantee />
-      <main>{renderPage()}</main>
+      <main className={fading ? 'page-fade page-fade--out' : 'page-fade'}>{renderPage()}</main>
       <Footer />
       <ScrollToTop />
       <a

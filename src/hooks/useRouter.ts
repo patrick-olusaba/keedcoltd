@@ -4,7 +4,7 @@ import { PageId } from '../types';
 const VALID_PAGES: PageId[] = [
   'home', 'managed-it', 'electrical-cctv', 'cybersecurity',
   'backup-recovery', 'it-consultancy', 'custom-software',
-  'about-us', 'our-work', 'get-started', 'terms-of-use',
+  'about-us', 'our-work', 'get-started', 'terms-of-use', 'callback',
 ];
 
 function getPageFromHash(): string {

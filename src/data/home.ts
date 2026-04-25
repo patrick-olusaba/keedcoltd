@@ -1,9 +1,9 @@
 import { Stat, Testimonial, Industry, Client, Service } from '../types';
 
 export const STATS: Stat[] = [
-  { value: '8+',  label: 'years of dedicated service & support' },
-  { value: '20+', label: 'dedicated team of IT experts' },
-  { value: '60+', label: 'offices served across East Africa' },
+  { value: '10+', label: 'years delivering engineering solutions across Kenya' },
+  { value: '3',   label: 'core disciplines: Electrical, ICT & Security' },
+  { value: '100+', label: 'projects completed for businesses & institutions' },
 ];
 
 export const TESTIMONIALS: Testimonial[] = [
@@ -31,12 +31,12 @@ export const INDUSTRIES: Industry[] = [
 ];
 
 export const SERVICES: Service[] = [
-  { icon: '🖥️', name: 'Managed IT services',  description: '24/7 maintenance and monitoring that keeps your computers, servers, and systems up and running.',            href: 'managed-it' },
-  { icon: '🛠️', name: 'IT Support',            description: 'We offer a comprehensive range of managed IT support packages for all sizes of business.',                    href: 'managed-it' },
-  { icon: '☁️', name: 'Backup and recovery',   description: 'Prevent data loss with encrypted storage and virtualized recovery, then enjoy increased productivity.',        href: 'backup-recovery' },
-  { icon: '📊', name: 'IT Consultancy',         description: 'Our IT consulting team will provide you with the highest available technology advice that you need.',           href: 'it-consultancy' },
-  { icon: '🔐', name: 'Cyber Security',         description: 'Protect your business from malware, hackers, viruses and the most common security threats.',                   href: 'cybersecurity' },
-  { icon: '💻', name: 'Custom Software',        description: 'Explore our range of bespoke software development with a strong end-user focus.',                              href: 'custom-software' },
+  { icon: '⚡', name: 'Electrical Infrastructure',  description: 'Professional electrical installation, power distribution, modern lighting, and backup power integration (UPS & generators) for commercial and residential projects.', href: 'electrical-cctv' },
+  { icon: '🌐', name: 'ICT Network Infrastructure', description: 'Structured cabling (Cat6/Fiber), enterprise WiFi, server rack installation, router & switch configuration, and fiber optic splicing for reliable connectivity.',       href: 'managed-it' },
+  { icon: '🔒', name: 'Security Systems',            description: 'CCTV surveillance, access control systems, and remote monitoring solutions to protect your facilities and give you peace of mind.',                                        href: 'electrical-cctv' },
+  { icon: '📡', name: 'Connectivity Solutions',      description: 'Long-range wireless bridge networks, internet distribution for estates and apartments, and farm/rural connectivity solutions for wide-area coverage.',                    href: 'managed-it' },
+  { icon: '🛠️', name: 'Installation & Commissioning', description: 'End-to-end project delivery: site assessment, system design, professional installation, testing & commissioning, and ongoing support & maintenance.',                  href: 'managed-it' },
+  { icon: '🏢', name: 'Corporate & Industrial',      description: 'Tailored infrastructure for offices, warehouses, residential developments, farms, and large properties — built to national NCA, EPRA, and CA standards.',               href: 'electrical-cctv' },
 ];
 
 export const CLIENTS: Client[] = [
