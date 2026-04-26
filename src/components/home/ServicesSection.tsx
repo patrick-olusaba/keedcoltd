@@ -5,12 +5,12 @@ import { useRouter } from '../../hooks/useRouter';
 
 // One representative Unsplash image per service
 const SVC_IMAGES = [
-  'https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=600&q=80', // electrical panel
-  'https://images.unsplash.com/photo-1606765962248-7ff407b51667?w=600&q=80', // network cables
-  'https://images.unsplash.com/photo-1557804506-669a67965ba0?w=600&q=80', // CCTV camera
-  'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600&q=80', // wireless/satellite
-  'https://images.unsplash.com/photo-1581092918056-0c4c3acd3789?w=600&q=80', // engineer on site
-  'https://images.unsplash.com/photo-1497366216548-37526070297c?w=600&q=80', // corporate office
+  'https://images.unsplash.com/photo-1621905252507-b35492cc74b4?w=600&q=80', // electrician wiring panel
+  'https://images.unsplash.com/photo-1573164713988-8665fc963095?w=600&q=80', // network rack cabling
+  'https://images.unsplash.com/photo-1585771724684-38269d6639fd?w=600&q=80', // CCTV on building
+  'https://images.unsplash.com/photo-1562408590-e32931084e23?w=600&q=80', // wireless tower/antenna
+  'https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=600&q=80', // engineer on site hard hat
+  'https://images.unsplash.com/photo-1486325212027-8081e485255e?w=600&q=80', // modern office building
 ];
 
 const ServicesSection: React.FC = () => {
