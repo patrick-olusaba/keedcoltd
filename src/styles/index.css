@@ -2132,3 +2132,206 @@ input, select, textarea, button { font-family: inherit; }
   .about-value__text { padding: 24px; }
   .about-value__text p { max-width: 100%; }
 }
+
+
+
+/* ================================================================
+   CASE STUDIES — LISTING
+================================================================ */
+.cs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 28px;
+}
+
+.cs-card {
+  border-radius: 14px;
+  overflow: hidden;
+  border: 1px solid #e8eaf0;
+  cursor: pointer;
+  background: var(--white);
+  transition: box-shadow var(--ease), transform var(--ease);
+}
+.cs-card:hover { box-shadow: 0 10px 40px rgba(0,0,0,0.10); transform: translateY(-4px); }
+
+.cs-card__img-wrap { position: relative; overflow: hidden; height: 220px; }
+.cs-card__img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; display: block; }
+.cs-card:hover .cs-card__img { transform: scale(1.05); }
+.cs-card__cat {
+  position: absolute; top: 14px; left: 14px;
+  background: var(--orange); color: var(--white);
+  font-size: 0.68rem; font-weight: 700; text-transform: uppercase;
+  letter-spacing: 0.08em; padding: 4px 12px; border-radius: 50px;
+}
+
+.cs-card__body { padding: 24px 22px; display: flex; flex-direction: column; gap: 10px; }
+.cs-card__client { font-size: 0.75rem; font-weight: 600; color: var(--text-light); text-transform: uppercase; letter-spacing: 0.06em; }
+.cs-card__title { font-size: 1rem; font-weight: 700; color: var(--text); line-height: 1.4; }
+.cs-card__stats {
+  display: flex; gap: 20px; padding: 14px 0;
+  border-top: 1px solid #f0f2f7; border-bottom: 1px solid #f0f2f7;
+}
+.cs-card__stat { display: flex; flex-direction: column; gap: 2px; }
+.cs-card__stat strong { font-size: 1.1rem; font-weight: 800; color: var(--orange); line-height: 1; }
+.cs-card__stat span  { font-size: 0.72rem; color: var(--text-light); }
+.cs-card__read { font-size: 0.82rem; font-weight: 700; color: var(--orange); }
+
+/* ================================================================
+   CASE STUDIES — DETAIL
+================================================================ */
+.cs-detail__hero {
+  min-height: 480px;
+  display: flex; align-items: flex-end;
+  background-size: cover; background-position: center;
+  position: relative;
+}
+.cs-detail__hero-overlay {
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(10,20,40,0.92) 0%, rgba(10,20,40,0.45) 60%, rgba(10,20,40,0.2) 100%);
+}
+.cs-detail__hero-content {
+  position: relative; z-index: 1;
+  padding-bottom: 52px; padding-top: 80px;
+  display: flex; flex-direction: column; gap: 12px;
+}
+.cs-detail__back {
+  background: none; border: none; cursor: pointer;
+  color: rgba(255,255,255,0.65); font-size: 0.82rem; font-weight: 600;
+  font-family: var(--font); padding: 0; width: fit-content;
+  transition: color var(--ease);
+}
+.cs-detail__back:hover { color: var(--white); }
+.cs-detail__hero-content h1 {
+  font-size: clamp(1.6rem, 3vw, 2.6rem); font-weight: 800;
+  color: var(--white); line-height: 1.2; max-width: 780px;
+}
+.cs-detail__meta { font-size: 0.85rem; color: rgba(255,255,255,0.55); }
+
+.cs-detail__stats-bar {
+  background: var(--navy);
+  display: flex; justify-content: center; gap: 64px;
+  padding: 28px 32px; flex-wrap: wrap;
+}
+.cs-detail__stat { display: flex; flex-direction: column; align-items: center; gap: 4px; }
+.cs-detail__stat strong { font-size: 1.8rem; font-weight: 800; color: var(--orange); line-height: 1; }
+.cs-detail__stat span  { font-size: 0.78rem; color: rgba(255,255,255,0.6); text-align: center; }
+
+.cs-detail__body {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 64px; align-items: start;
+}
+.cs-detail__text h2 {
+  font-size: 1.15rem; font-weight: 700; color: var(--text);
+  margin: 32px 0 10px;
+}
+.cs-detail__text h2:first-child { margin-top: 0; }
+.cs-detail__text p { font-size: 0.97rem; color: var(--text-light); line-height: 1.8; }
+
+.cs-detail__gallery-main {
+  width: 100%; border-radius: 12px; object-fit: cover;
+  height: 320px; display: block;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.12);
+}
+.cs-detail__thumbs {
+  display: flex; gap: 10px; margin-top: 12px; flex-wrap: wrap;
+}
+.cs-detail__thumb {
+  width: 72px; height: 54px; object-fit: cover;
+  border-radius: 6px; cursor: pointer; opacity: 0.55;
+  border: 2px solid transparent;
+  transition: opacity var(--ease), border-color var(--ease);
+}
+.cs-detail__thumb:hover { opacity: 0.85; }
+.cs-detail__thumb--active { opacity: 1; border-color: var(--orange); }
+
+.cs-detail__cta {
+  background: #f8f9fc; padding: 72px 0; text-align: center;
+}
+.cs-detail__cta h3 { font-size: 1.6rem; font-weight: 700; margin-bottom: 10px; }
+.cs-detail__cta p  { font-size: 0.97rem; color: var(--text-light); margin-bottom: 28px; }
+
+/* Responsive */
+@media (max-width: 900px) {
+  .cs-grid { grid-template-columns: repeat(2, 1fr); }
+  .cs-detail__body { grid-template-columns: 1fr; gap: 40px; }
+  .cs-detail__stats-bar { gap: 32px; }
+}
+@media (max-width: 560px) {
+  .cs-grid { grid-template-columns: 1fr; }
+  .cs-detail__hero { min-height: 360px; }
+  .cs-detail__gallery-main { height: 220px; }
+}
+
+
+/* ================================================================
+   HERO — GETRONICS STYLE
+================================================================ */
+.hero--getronics {
+  background: url('/happy.jpg') center/cover no-repeat;
+  background-color: #0a1628;
+  min-height: 88vh;
+  display: flex;
+  align-items: center;
+}
+
+.hero__getronics-body {
+  position: relative;
+  z-index: 2;
+  max-width: 780px;
+  padding-top: 80px;
+  padding-bottom: 80px;
+}
+
+.hero__getronics-eyebrow {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: rgba(255,255,255,0.65);
+  letter-spacing: 0.06em;
+  margin-bottom: 20px;
+}
+
+.hero__getronics-title {
+  font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+  font-weight: 800;
+  color: var(--white);
+  line-height: 1.12;
+  margin-bottom: 28px;
+}
+.hero__getronics-title em {
+  font-style: normal;
+  color: var(--orange);
+}
+
+.hero__getronics-body-text,
+.hero__getronics-body > p {
+  font-size: 1rem;
+  color: rgba(255,255,255,0.75);
+  line-height: 1.8;
+  max-width: 620px;
+  margin-bottom: 40px;
+}
+.hero__getronics-body > p strong {
+  color: rgba(255,255,255,0.95);
+  font-weight: 600;
+}
+
+.btn--getronics-cta {
+  display: inline-block;
+  background: var(--orange);
+  color: var(--white) !important;
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 16px 32px;
+  border-radius: 2px;
+  transition: background var(--ease), transform var(--ease);
+}
+.btn--getronics-cta:hover {
+  background: var(--orange-dark);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .hero--getronics { min-height: 70vh; }
+  .hero__getronics-body { padding-top: 60px; padding-bottom: 60px; }
+}

@@ -6,6 +6,7 @@ import HomePage       from './components/pages/HomePage';
 import ServicePage    from './components/pages/ServicePage';
 import AboutPage      from './components/pages/AboutPage';
 import GetStartedPage from './components/pages/GetStartedPage';
+import CaseStudiesPage  from './components/pages/CaseStudiesPage';
 import PortfolioPage   from './components/pages/PortfolioPage';
 import BlogPage        from './components/pages/BlogPage';
 import BlogPostPage    from './components/pages/BlogPostPage';
@@ -57,6 +58,7 @@ const App: React.FC = () => {
     if (displayPage === 'home')          return <HomePage />;
     if (displayPage === 'about-us')      return <AboutPage />;
     if (displayPage === 'our-work')      return <PortfolioPage />;
+    if (displayPage === 'case-studies')  return <CaseStudiesPage />;
     if (displayPage === 'blog')          return <BlogPage />;
     if (displayPage.startsWith('blog-')) return <BlogPostPage slug={displayPage.replace('blog-', '')} />;
     if (displayPage === 'get-started')   return <GetStartedPage />;

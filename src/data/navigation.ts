@@ -10,10 +10,11 @@ export const SERVICE_NAV: NavItem[] = [
 ];
 
 export const NAV_ITEMS: NavItem[] = [
-  { label: 'Our Work',   href: 'our-work' },
-  { label: 'About Us',   href: 'about-us' },
-  { label: 'Blog',       href: 'blog' },
-  { label: 'Get Started', href: 'get-started', cta: true },
+  { label: 'Case Studies', href: 'case-studies' },
+  { label: 'Our Work',     href: 'our-work' },
+  { label: 'About Us',     href: 'about-us' },
+  { label: 'Blog',         href: 'blog' },
+  { label: 'Get Started',  href: 'get-started', cta: true },
 ];
 
 export const TOP_LINKS: NavItem[] = [

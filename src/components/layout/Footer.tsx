@@ -15,10 +15,11 @@ const FOOTER_COLS = [
   {
     heading: 'Company',
     links: [
-      { label: 'About Us', href: 'about-us' },
-      { label: 'Our Work', href: 'our-work' },
-      { label: 'Blog', href: 'blog' },
-      { label: 'Get Started', href: 'get-started' },
+      { label: 'About Us',     href: 'about-us' },
+      { label: 'Case Studies', href: 'case-studies' },
+      { label: 'Our Work',     href: 'our-work' },
+      { label: 'Blog',         href: 'blog' },
+      { label: 'Get Started',  href: 'get-started' },
       { label: 'Terms of Use', href: 'terms-of-use' },
     ],
   },

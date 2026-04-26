@@ -31,10 +31,10 @@ const AboutPage: React.FC = () => (
     {/* Hero */}
     <section className="page-hero page-hero--about">
       <div className="page-hero__bg" />
-      <div className="container page-hero__split">
-        <Reveal><p className="page-hero__eyebrow">About Keedco Ltd</p></Reveal>
+      <div className="container page-hero__content">
+        <Reveal><span className="badge">About Keedco Ltd</span></Reveal>
         <Reveal delay={80}>
-          <h1 className="page-hero__split-title">Engineering Connectivity, Securing Progress.</h1>
+          <h1>Engineering Connectivity, Securing Progress.</h1>
         </Reveal>
         <Reveal delay={140}>
           <p className="page-hero__subtitle">
