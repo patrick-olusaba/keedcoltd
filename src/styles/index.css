@@ -2266,16 +2266,24 @@ input, select, textarea, button { font-family: inherit; }
    HERO — GETRONICS STYLE
 ================================================================ */
 .hero--getronics {
-  background: url('/happy.jpg') center/cover no-repeat;
+  background: url('/nairobicity.jpg') center/cover no-repeat;
   background-color: #0a1628;
   min-height: 88vh;
   display: flex;
   align-items: center;
+  position: relative;
+}
+
+.hero__network-canvas {
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
 }
 
 .hero__getronics-body {
   position: relative;
-  z-index: 2;
+  z-index: 3;
   max-width: 780px;
   padding-top: 80px;
   padding-bottom: 80px;
@@ -2334,4 +2342,12 @@ input, select, textarea, button { font-family: inherit; }
 @media (max-width: 768px) {
   .hero--getronics { min-height: 70vh; }
   .hero__getronics-body { padding-top: 60px; padding-bottom: 60px; }
+}
+@media (max-width: 860px) and (max-height: 900px) {
+  .hero--getronics { min-height: 100dvh; height: 100dvh; }
+  .hero__getronics-body { padding-top: 32px; padding-bottom: 32px; }
+  .hero__getronics-title { font-size: clamp(1.5rem, 6vw, 2.2rem); margin-bottom: 14px; }
+  .hero__getronics-eyebrow { margin-bottom: 10px; }
+  .hero__getronics-body > p { font-size: 0.88rem; line-height: 1.65; margin-bottom: 24px; }
+  .btn--getronics-cta { padding: 13px 24px; font-size: 0.75rem; }
 }

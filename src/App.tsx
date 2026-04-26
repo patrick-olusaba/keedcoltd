@@ -71,7 +71,6 @@ const App: React.FC = () => {
   return (
     <>
       <Navbar />
-      <ResponseGuarantee />
       <main className={fading ? 'page-fade page-fade--out' : 'page-fade'}>{renderPage()}</main>
       <Footer />
       <ScrollToTop />

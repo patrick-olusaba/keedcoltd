@@ -1,5 +1,6 @@
 import React from 'react';
 import { Reveal } from '../shared';
+import ResponseGuarantee from '../layout/ResponseGuarantee';
 
 const CERTS = ['National Construction Authority (NCA)', 'Energy and Petroleum Regulatory Authority (EPRA)', 'Communications Authority of Kenya (CA)'];
 
@@ -29,6 +30,7 @@ const VALUES = [
 const AboutPage: React.FC = () => (
   <>
     {/* Hero */}
+    <ResponseGuarantee />
     <section className="page-hero page-hero--about">
       <div className="page-hero__bg" />
       <div className="container page-hero__content">

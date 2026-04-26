@@ -1,11 +1,13 @@
 import React from 'react';
 import { useRouter } from '../../hooks/useRouter';
+import NetworkCanvas from '../shared/NetworkCanvas';
 
 const Hero: React.FC = () => {
   const { navigate } = useRouter();
   return (
     <section className="hero hero--getronics">
       <div className="hero__overlay" />
+      <NetworkCanvas className="hero__network-canvas" />
       <div className="container hero__getronics-body">
         <p className="hero__getronics-eyebrow">Power. Connect. Secure.</p>
         <h1 className="hero__getronics-title">
