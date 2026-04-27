@@ -2,11 +2,12 @@ import React from 'react';
 import { Reveal } from '../shared';
 import { useRouter } from '../../hooks/useRouter';
 
-const STATS = [
-  { num: '50+',       label: 'CCTV installations completed' },
-  { num: 'KSh 2M+',  label: 'saved for clients in downtime costs' },
-  { num: '10+',       label: 'years serving Kenya businesses' },
-  { num: '100%',      label: 'NCA, EPRA & CA certified work' },
+const POINTS = [
+  { title: 'One stop. Zero finger-pointing.', body: 'We handle electrical, data, security, and advice end-to-end.' },
+  { title: 'Built for Kenya.',                body: 'Designed for local power fluctuations, tropical climate, and security needs.' },
+  { title: 'Future-proof by design.',         body: 'Systems that grow with you, not obsolete in two years.' },
+  { title: 'Consult before you commit.',      body: 'We audit first, so you never over-pay or under-spec.' },
+  { title: 'Local team, fast response.',      body: 'Based in Kenya, ready when you need us.' },
 ];
 
 const WhyKeedCo: React.FC = () => {
@@ -14,14 +15,17 @@ const WhyKeedCo: React.FC = () => {
   return (
     <section className="why-keedco">
       <div className="container">
-        <Reveal><p className="why-keedco__eyebrow">Why businesses choose us</p></Reveal>
-        <Reveal delay={60}><h2 className="why-keedco__heading">Numbers that speak for themselves</h2></Reveal>
-        <div className="why-keedco__stats">
-          {STATS.map((s, i) => (
-            <Reveal key={i} delay={i * 80}>
-              <div className="why-stat">
-                <strong className="why-stat__num">{s.num}</strong>
-                <span className="why-stat__label">{s.label}</span>
+        <Reveal><p className="why-keedco__eyebrow">Why choose us</p></Reveal>
+        <Reveal delay={60}><h2 className="why-keedco__heading">Why businesses and homeowners trust us</h2></Reveal>
+        <div className="why-keedco__points">
+          {POINTS.map((p, i) => (
+            <Reveal key={i} delay={i * 70}>
+              <div className="why-point">
+                <span className="why-point__check">✅</span>
+                <div>
+                  <strong>{p.title}</strong>
+                  <p>{p.body}</p>
+                </div>
               </div>
             </Reveal>
           ))}
@@ -39,4 +43,3 @@ const WhyKeedCo: React.FC = () => {
 };
 
 export default WhyKeedCo;
-

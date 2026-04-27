@@ -395,7 +395,7 @@ input, select, textarea, button { font-family: inherit; }
   font-size: clamp(2rem, 3vw, 2.8rem);
   font-weight: 800;
   color: var(--text);
-  margin-bottom: 72px;
+  margin-bottom: 12px;
 }
 
 /* ── Timeline wrapper ── */
@@ -1528,6 +1528,38 @@ input, select, textarea, button { font-family: inherit; }
   padding: 28px 32px;
   overflow-x: hidden;
 }
+.trust-bar__heading {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.trust-bar__groups {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 0;
+  flex-wrap: wrap;
+}
+.trust-bar__group {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+  padding: 0 32px;
+  border-right: 1px solid #e8eaf0;
+}
+.trust-bar__group:last-child { border-right: none; }
+.trust-bar__group-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--orange);
+}
 .trust-bar__inner {
   display: flex;
   align-items: center;
@@ -1546,17 +1578,24 @@ input, select, textarea, button { font-family: inherit; }
 .trust-bar__logos {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 20px;
   flex-wrap: wrap;
+  justify-content: center;
 }
 .trust-bar__logo img {
-  height: 48px;
+  height: 36px;
   width: auto;
   object-fit: contain;
   filter: grayscale(100%) opacity(0.55);
   transition: filter var(--ease);
 }
 .trust-bar__logo:hover img { filter: grayscale(0%) opacity(1); }
+
+@media (max-width: 600px) {
+  .trust-bar { padding: 20px 16px; }
+  .trust-bar__group { padding: 12px 16px; border-right: none; border-bottom: 1px solid #e8eaf0; width: 100%; }
+  .trust-bar__group:last-child { border-bottom: none; }
+}
 
 /* ================================================================
    PORTFOLIO OUTCOME BADGE
@@ -2339,6 +2378,23 @@ input, select, textarea, button { font-family: inherit; }
   transform: translateY(-2px);
 }
 
+.btn--getronics-cta--outline {
+  background: transparent;
+  border: 2px solid rgba(255,255,255,0.6);
+  color: var(--white) !important;
+}
+.btn--getronics-cta--outline:hover {
+  background: rgba(255,255,255,0.12);
+  border-color: var(--white);
+  transform: translateY(-2px);
+}
+
+.hero__dual-ctas {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
 @media (max-width: 768px) {
   .hero--getronics { min-height: 70vh; }
   .hero__getronics-body { padding-top: 60px; padding-bottom: 60px; }
@@ -2350,4 +2406,236 @@ input, select, textarea, button { font-family: inherit; }
   .hero__getronics-eyebrow { margin-bottom: 10px; }
   .hero__getronics-body > p { font-size: 0.88rem; line-height: 1.65; margin-bottom: 24px; }
   .btn--getronics-cta { padding: 13px 24px; font-size: 0.75rem; }
+}
+
+
+/* ================================================================
+   SERVICES — 4-PILLAR GRID
+================================================================ */
+.services-section__sub {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--text-light);
+  margin-bottom: 48px;
+}
+
+.svc-pillars {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.svc-pillar {
+  background: var(--white);
+  border: 1px solid #e8eaf0;
+  border-radius: 14px;
+  padding: 36px 28px 32px;
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  cursor: pointer;
+  transition: box-shadow var(--ease), transform var(--ease), border-color var(--ease);
+}
+.svc-pillar:hover {
+  box-shadow: 0 10px 40px rgba(232,98,42,0.12);
+  transform: translateY(-5px);
+  border-color: var(--orange);
+}
+
+.svc-pillar__icon {
+  font-size: 2.2rem;
+  line-height: 1;
+}
+
+.svc-pillar__title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.svc-pillar__body {
+  font-size: 0.87rem;
+  color: var(--text-light);
+  line-height: 1.65;
+  flex: 1;
+}
+
+.svc-pillar__benefit {
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: var(--text);
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 6px;
+  padding: 8px 12px;
+}
+
+.svc-pillar__link {
+  font-size: 0.82rem;
+  font-weight: 700;
+  color: var(--orange);
+  margin-top: 4px;
+}
+
+@media (max-width: 900px) {
+  .svc-pillars { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 520px) {
+  .svc-pillars { grid-template-columns: 1fr; }
+}
+
+
+/* ================================================================
+   PARTNERS — TABBED BRAND SECTION
+================================================================ */
+.partners {
+  background: #f8f9fc;
+  border-bottom: 1px solid #e8eaf0;
+  padding: 40px 0;
+}
+.partners__heading {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--text-light);
+  text-align: center;
+  margin-bottom: 20px;
+}
+.partners__tabs {
+  display: flex;
+  justify-content: center;
+  gap: 8px;
+  margin-bottom: 28px;
+  flex-wrap: wrap;
+}
+.partners__tab {
+  background: var(--white);
+  border: 1.5px solid #e2e8f0;
+  border-radius: 50px;
+  padding: 8px 22px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-light);
+  cursor: pointer;
+  font-family: var(--font);
+  transition: border-color var(--ease), color var(--ease), background var(--ease);
+}
+.partners__tab:hover { border-color: var(--orange); color: var(--orange); }
+.partners__tab--active {
+  background: var(--orange);
+  border-color: var(--orange);
+  color: var(--white);
+}
+.partners__groups {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.partners__group {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.partners__group-label {
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--orange);
+}
+.partners__chips {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+.partners__chip {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: var(--text);
+  background: var(--white);
+  border: 1px solid #e8eaf0;
+  border-radius: 6px;
+  padding: 6px 10px;
+  transition: border-color var(--ease);
+}
+.partners__chip:hover { border-color: var(--orange); }
+.partners__chip img {
+  width: 20px; height: 20px;
+  object-fit: contain; flex-shrink: 0;
+}
+.partners__chip span {
+  white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+}
+
+@media (max-width: 900px) {
+  .partners__groups { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 560px) {
+  .partners__groups { grid-template-columns: repeat(2, 1fr); }
+}
+
+.partners__note {
+  text-align: center;
+  font-size: 0.82rem;
+  color: var(--text-light);
+  margin-top: 24px;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+
+/* ================================================================
+   WHY KEEDCO — TRUST POINTS GRID
+================================================================ */
+.why-keedco__points {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
+.why-point {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  background: var(--white);
+  border: 1px solid #e8eaf0;
+  border-radius: 12px;
+  padding: 24px 22px;
+  transition: box-shadow var(--ease), transform var(--ease);
+}
+.why-point:hover {
+  box-shadow: 0 6px 24px rgba(232,98,42,0.08);
+  transform: translateY(-2px);
+}
+
+.why-point__check {
+  font-size: 1.2rem;
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.why-point strong {
+  display: block;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 6px;
+}
+
+.why-point p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  line-height: 1.65;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .why-keedco__points { grid-template-columns: 1fr; }
 }
