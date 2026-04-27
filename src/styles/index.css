@@ -2731,3 +2731,92 @@ input, select, textarea, button { font-family: inherit; }
   color: var(--orange);
   margin-bottom: 10px;
 }
+
+
+/* ================================================================
+   CUSTOMER STORIES
+================================================================ */
+.stories {
+  background: var(--navy);
+  padding: 88px 0;
+}
+.stories__eyebrow {
+  text-align: center;
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
+.stories__heading {
+  text-align: center;
+  font-size: clamp(1.5rem, 2.5vw, 2rem);
+  font-weight: 700;
+  color: var(--white);
+  margin-bottom: 48px;
+}
+.stories__featured {
+  max-width: 760px;
+  margin: 0 auto 48px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.stories__tag {
+  display: inline-block;
+  background: rgba(232,98,42,0.18);
+  color: var(--orange);
+  border: 1px solid rgba(232,98,42,0.35);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 5px 14px;
+  border-radius: 50px;
+}
+.stories__quote {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  color: rgba(255,255,255,0.88);
+  font-style: italic;
+  line-height: 1.75;
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+.stories__cite {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  font-style: normal;
+}
+.stories__cite strong { color: var(--white); font-size: 0.95rem; }
+.stories__cite span   { color: rgba(255,255,255,0.5); font-size: 0.82rem; }
+
+.stories__cards {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 10px;
+}
+.stories__card {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 10px;
+  padding: 14px 12px;
+  text-align: left;
+  cursor: pointer;
+  font-family: var(--font);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  transition: background var(--ease), border-color var(--ease);
+}
+.stories__card:hover { background: rgba(255,255,255,0.09); border-color: rgba(232,98,42,0.3); }
+.stories__card--active { background: rgba(232,98,42,0.15); border-color: var(--orange); }
+.stories__card strong { font-size: 0.82rem; color: var(--white); font-weight: 600; }
+.stories__card span   { font-size: 0.72rem; color: rgba(255,255,255,0.45); }
+
+@media (max-width: 900px) { .stories__cards { grid-template-columns: repeat(3, 1fr); } }
+@media (max-width: 560px) { .stories__cards { grid-template-columns: repeat(2, 1fr); } }
