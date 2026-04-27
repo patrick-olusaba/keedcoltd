@@ -2698,3 +2698,36 @@ input, select, textarea, button { font-family: inherit; }
   .hero__getronics-title { font-size: clamp(1.5rem, 6vw, 2.2rem); margin-bottom: 0; }
   .hero__band-body { font-size: 0.88rem; margin-bottom: 24px; }
 }
+
+
+.hero__bullets {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 32px;
+}
+.hero__bullets li {
+  font-size: 0.88rem;
+  color: rgba(255,255,255,0.8);
+  padding-left: 18px;
+  position: relative;
+}
+.hero__bullets li::before {
+  content: '·';
+  position: absolute;
+  left: 0;
+  color: var(--orange);
+  font-size: 1.2rem;
+  line-height: 1;
+}
+
+
+.hero__why-label {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--orange);
+  margin-bottom: 10px;
+}
