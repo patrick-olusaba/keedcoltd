@@ -3,10 +3,8 @@ import { NavItem } from '../types';
 export const SERVICE_NAV: NavItem[] = [
   { label: 'Electrical Infrastructure',  href: 'electrical-cctv' },
   { label: 'ICT Network Infrastructure', href: 'managed-it' },
-  { label: 'Security Systems',           href: 'electrical-cctv' },
-  { label: 'Connectivity Solutions',     href: 'managed-it' },
-  { label: 'IT Consultancy',             href: 'it-consultancy' },
-  { label: 'Custom Software',            href: 'custom-software' },
+  { label: 'Security Systems',           href: 'security' },
+  { label: 'Consultancy Services',       href: 'it-consultancy' },
 ];
 
 export const NAV_ITEMS: NavItem[] = [

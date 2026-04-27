@@ -50,22 +50,31 @@ const ServicePage: React.FC<ServicePageProps> = ({ pageKey }) => {
 
   return (
     <>
-      {/* ── Hero: left text + right form ── */}
-      <section className="page-hero page-hero--split" style={{ backgroundImage: `url('${data.heroBg}')` }}>
-        <div className="page-hero__bg page-hero__bg--img" />
-        <div className="container page-hero__split-inner">
-          <div className="page-hero__left">
-            <Reveal><Badge>{data.badge}</Badge></Reveal>
-            <Reveal delay={80}>
-              <h1>
-                {data.heroTitleLine1}<br />
-                {data.heroTitleLine2}
-              </h1>
+      {/* ── Hero: full-width large title over bg image ── */}
+      <section className="svc-hero" style={{ backgroundImage: `url('${data.heroBg}')` }}>
+        <div className="svc-hero__overlay" />
+        <div className="container svc-hero__body">
+          <Reveal><span className="badge">{data.badge}</span></Reveal>
+          <Reveal delay={60}>
+            <h1 className="svc-hero__title">
+              {data.heroTitleLine1}{data.heroTitleLine2 && <><br /><em>{data.heroTitleLine2}</em></>}
+            </h1>
+          </Reveal>
+          <Reveal delay={120}>
+            <p className="svc-hero__subtitle">{data.heroSubtitle}</p>
+          </Reveal>
+          {data.heroKeyOfferings && (
+            <Reveal delay={160}>
+              <p className="hero__why-label">Key offerings</p>
+              <ul className="hero__bullets">
+                {data.heroKeyOfferings.map(o => <li key={o}>{o}</li>)}
+              </ul>
             </Reveal>
-            <Reveal delay={160}><p className="page-hero__subtitle">{data.heroSubtitle}</p></Reveal>
-          </div>
-          <Reveal delay={120} className="page-hero__right">
-            <QuoteForm />
+          )}
+          <Reveal delay={200}>
+            <a href="#" className="btn--getronics-cta" onClick={(e) => { e.preventDefault(); navigate('get-started'); }}>
+              Get a Free Quote
+            </a>
           </Reveal>
         </div>
       </section>

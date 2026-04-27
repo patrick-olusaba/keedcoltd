@@ -14,7 +14,7 @@ import TermsPage      from './components/pages/TermsPage';
 import RequestCallbackPage from './components/pages/RequestCallbackPage';
 import { useRouter }  from './hooks/useRouter';
 
-const SERVICE_KEYS = ['managed-it', 'electrical-cctv', 'cybersecurity', 'backup-recovery', 'it-consultancy', 'custom-software'];
+const SERVICE_KEYS = ['managed-it', 'electrical-cctv', 'cybersecurity', 'backup-recovery', 'it-consultancy', 'custom-software', 'security'];
 
 const ScrollToTop: React.FC = () => {
   const [visible, setVisible] = useState(false);

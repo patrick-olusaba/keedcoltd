@@ -5,11 +5,10 @@ const FOOTER_COLS = [
   {
     heading: 'Services',
     links: [
-      { label: 'Electrical Infrastructure', href: 'electrical-cctv' },
+      { label: 'Electrical Infrastructure',  href: 'electrical-cctv' },
       { label: 'ICT Network Infrastructure', href: 'managed-it' },
-      { label: 'Security Systems', href: 'electrical-cctv' },
-      { label: 'Connectivity Solutions', href: 'managed-it' },
-      { label: 'IT Consultancy', href: 'it-consultancy' },
+      { label: 'Security Systems',           href: 'security' },
+      { label: 'Consultancy Services',       href: 'it-consultancy' },
     ],
   },
   {
@@ -41,7 +40,19 @@ const Footer: React.FC = () => {
           <div className="footer__brand">
             <div className="footer__brand-name">Keedco Ltd</div>
             <p className="footer__brand-tagline">Engineering Connectivity, Securing Progress</p>
-            <p className="footer__brand-certs">Certified: NCA · EPRA · CA</p>
+            <div className="footer__brand-certs">
+              {[
+                { name: 'NCA',      logo: '/nca.png' },
+                { name: 'EPRA',     logo: '/EPRA.jpg' },
+                { name: 'CA Kenya', logo: '/cA.jpg' },
+              ].map(c => (
+                <div key={c.name} className="footer__cert" title={c.name}>
+                  <img src={c.logo} alt={c.name}
+                    onError={(e) => { (e.target as HTMLImageElement).style.display='none'; }} />
+                  <span>{c.name}</span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Link columns */}

@@ -22,7 +22,7 @@ const PILLARS = [
     title: 'Security Systems',
     body: 'CCTV (analogue & IP), biometric/card access control, remote monitoring.',
     benefit: 'See and control everything, anywhere',
-    href: 'electrical-cctv',
+    href: 'security',
   },
   {
     icon: '📋',

@@ -2,7 +2,7 @@ import { useState, useEffect, useCallback } from 'react';
 import { PageId } from '../types';
 
 const VALID_PAGES: PageId[] = [
-  'home', 'managed-it', 'electrical-cctv', 'cybersecurity',
+  'home', 'managed-it', 'electrical-cctv', 'cybersecurity', 'security',
   'backup-recovery', 'it-consultancy', 'custom-software',
   'about-us', 'our-work', 'case-studies', 'get-started', 'terms-of-use', 'callback',
 ];

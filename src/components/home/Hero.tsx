@@ -8,45 +8,30 @@ const Hero: React.FC = () => {
     <section className="hero hero--getronics">
       <div className="hero__overlay" />
       <NetworkCanvas className="hero__network-canvas" />
-
-      <div className="hero__bands">
-        <div className="hero__band hero__band--1">
-          <div className="container">
-            <p className="hero__band-eyebrow">Power. Connect. Secure.</p>
-          </div>
-        </div>
-
-        <div className="hero__band hero__band--2">
-          <div className="container">
-            <h1 className="hero__getronics-title">
-              Building Your Solutions,<br /><em>Powering Progress</em>
-            </h1>
-          </div>
-        </div>
-
-        <div className="hero__band hero__band--3">
-          <div className="container">
-            <p className="hero__band-body">
-              We provide end‑to‑end infrastructure solutions that keep your business connected,
-              secure, and productive — no matter where you operate across Kenya. From electrical
-              systems and structured cabling to enterprise WiFi, CCTV, and security, our solutions
-              are <strong>built to scale with you and work seamlessly across sites, buildings, and teams.</strong>
-            </p>
-            <p className="hero__why-label">Why us?</p>
-            <ul className="hero__bullets">
-              <li>Single source for electrical, data, and security</li>
-              <li>Designed for Kenyan businesses, homes, and institutions</li>
-              <li>Reliable, future‑ready, and locally supported</li>
-            </ul>
-            <div className="hero__dual-ctas">
-              <a href="#" className="btn--getronics-cta" onClick={(e) => { e.preventDefault(); navigate('managed-it'); }}>
-                Explore Services
-              </a>
-              <a href="#" className="btn--getronics-cta btn--getronics-cta--outline" onClick={(e) => { e.preventDefault(); navigate('about-us'); }}>
-                Why partner with us?
-              </a>
-            </div>
-          </div>
+      <div className="container hero__getronics-body">
+        <p className="hero__band-eyebrow">Power. Connect. Secure.</p>
+        <h1 className="hero__getronics-title">
+          Building Your Solutions,<br /><em>Powering Progress</em>
+        </h1>
+        <p className="hero__band-body">
+          We provide end‑to‑end infrastructure solutions that keep your business connected,
+          secure, and productive — no matter where you operate across Kenya. From electrical
+          systems and structured cabling to enterprise WiFi, CCTV, and security, our solutions
+          are <strong>built to scale with you and work seamlessly across sites, buildings, and teams.</strong>
+        </p>
+        <p className="hero__why-label">Why us?</p>
+        <ul className="hero__bullets">
+          <li>Single source for electrical, data, and security</li>
+          <li>Designed for Kenyan businesses, homes, and institutions</li>
+          <li>Reliable, future‑ready, and locally supported</li>
+        </ul>
+        <div className="hero__dual-ctas">
+          <a href="#" className="btn--getronics-cta" onClick={(e) => { e.preventDefault(); navigate('managed-it'); }}>
+            Explore Services
+          </a>
+          <a href="#" className="btn--getronics-cta btn--getronics-cta--outline" onClick={(e) => { e.preventDefault(); navigate('about-us'); }}>
+            Why partner with us?
+          </a>
         </div>
       </div>
     </section>

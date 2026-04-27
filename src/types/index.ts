@@ -49,6 +49,7 @@ export interface ServicePageData {
   heroTitleLine1: string;
   heroTitleLine2: string;
   heroSubtitle: string;
+  heroKeyOfferings?: string[];
   heroBg: string;
   benefitsTitle: string;
   benefitsLead: string;
@@ -56,11 +57,6 @@ export interface ServicePageData {
   includedTitle: string;
   includedLead?: string;
   included: IncludedItem[];
-}
-
-export interface FAQItem {
-  question: string;
-  answer: string;
 }
 
 export type PageId =
@@ -71,8 +67,10 @@ export type PageId =
   | 'backup-recovery'
   | 'it-consultancy'
   | 'custom-software'
+  | 'security'
   | 'about-us'
   | 'our-work'
+  | 'case-studies'
   | 'get-started'
   | 'terms-of-use'
   | 'callback';
