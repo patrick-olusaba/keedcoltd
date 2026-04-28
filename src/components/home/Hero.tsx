@@ -26,11 +26,14 @@ const Hero: React.FC = () => {
           <li>Reliable, future‑ready, and locally supported</li>
         </ul>
         <div className="hero__dual-ctas">
-          <a href="#" className="btn--getronics-cta" onClick={(e) => { e.preventDefault(); navigate('managed-it'); }}>
-            Explore Services
+          <a href="tel:+254720119984" className="btn--getronics-cta">
+            📞 Call Now
           </a>
-          <a href="#" className="btn--getronics-cta btn--getronics-cta--outline" onClick={(e) => { e.preventDefault(); navigate('about-us'); }}>
-            Why partner with us?
+          <a href="https://wa.me/254715119984" target="_blank" rel="noopener noreferrer" className="btn--getronics-cta btn--getronics-cta--whatsapp">
+            💬 WhatsApp Us
+          </a>
+          <a href="#" className="btn--getronics-cta btn--getronics-cta--outline" onClick={(e) => { e.preventDefault(); navigate('managed-it'); }}>
+            Explore Services
           </a>
         </div>
       </div>

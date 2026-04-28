@@ -3,7 +3,7 @@ import Hero            from '../home/Hero';
 import ServicesSection from '../home/ServicesSection';
 import SocialProof     from '../home/SocialProof';
 import TrustBar        from '../home/TrustBar';
-import ModernIT        from '../home/ModernIT';
+import WhoWeServe    from '../home/WhoWeServe';
 import WhyKeedCo       from '../home/WhyKeedCo';
 import Industries      from '../home/Industries';
 import CustomerStories from '../home/CustomerStories';
@@ -16,7 +16,7 @@ const HomePage: React.FC = () => (
     <ServicesSection />
     <SocialProof />
     <TrustBar />
-    <ModernIT />
+    <WhoWeServe />
     <WhyKeedCo />
     <Industries />
     <CustomerStories />
