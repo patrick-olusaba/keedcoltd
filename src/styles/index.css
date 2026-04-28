@@ -569,10 +569,9 @@ input, select, textarea, button { font-family: inherit; }
   min-width: 52px;
 }
 .footer__cert img {
-  width: 28px;
-  height: 28px;
+  width: 40px;
+  height: 40px;
   object-fit: contain;
-  filter: brightness(0) invert(1) opacity(0.8);
 }
 .footer__cert span {
   font-size: 0.6rem;
