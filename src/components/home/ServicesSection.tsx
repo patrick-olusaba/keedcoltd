@@ -5,28 +5,28 @@ import { useRouter } from '../../hooks/useRouter';
 const PILLARS = [
   {
     icon: '⚡',
-    title: 'Electrical Infrastructure',
+    title: 'Electrical Wiring & Installation',
     body: 'Professional installation, power distribution, modern lighting, UPS & generator integration.',
     benefit: 'Never lose power when it matters',
     href: 'electrical-cctv',
   },
   {
     icon: '🌐',
-    title: 'ICT Network Infrastructure',
+    title: 'Office Network Setup & IT Support',
     body: 'Cat6/Fiber cabling, enterprise WiFi, server racks, switching, fiber splicing.',
     benefit: 'Connect like a Fortune 500 company',
     href: 'managed-it',
   },
   {
     icon: '🛡️',
-    title: 'Security Systems',
+    title: 'CCTV, Access Control & Remote Monitoring',
     body: 'CCTV (analogue & IP), biometric/card access control, remote monitoring.',
     benefit: 'See and control everything, anywhere',
     href: 'security',
   },
   {
     icon: '📋',
-    title: 'Consultancy Services',
+    title: 'Infrastructure Audit & Project Planning',
     body: 'Technology audits, network design, risk assessments, BOQ, project planning.',
     benefit: 'Spend smart — no over-spec, no blind spots',
     href: 'it-consultancy',

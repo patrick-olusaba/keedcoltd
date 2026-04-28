@@ -6,6 +6,7 @@ import TrustBar        from '../home/TrustBar';
 import WhoWeServe    from '../home/WhoWeServe';
 import WhyKeedCo       from '../home/WhyKeedCo';
 import Industries      from '../home/Industries';
+import RecentProjects  from '../home/RecentProjects';
 import CustomerStories from '../home/CustomerStories';
 import ProcessSection  from '../home/ProcessSection';
 import Clients         from '../home/Clients';
@@ -18,6 +19,7 @@ const HomePage: React.FC = () => (
     <TrustBar />
     <WhoWeServe />
     <WhyKeedCo />
+    <RecentProjects />
     <Industries />
     <CustomerStories />
     <ProcessSection />

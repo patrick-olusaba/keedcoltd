@@ -11,13 +11,11 @@ const Hero: React.FC = () => {
       <div className="container hero__getronics-body">
         <p className="hero__band-eyebrow">Power. Connect. Secure.</p>
         <h1 className="hero__getronics-title">
-          Building Your Solutions,<br /><em>Powering Progress</em>
+          Reliable ICT, Electrical &<br /><em>CCTV Solutions</em>
         </h1>
         <p className="hero__band-body">
-          We provide end‑to‑end infrastructure solutions that keep your business connected,
-          secure, and productive — no matter where you operate across Kenya. From electrical
-          systems and structured cabling to enterprise WiFi, CCTV, and security, our solutions
-          are <strong>built to scale with you and work seamlessly across sites, buildings, and teams.</strong>
+          For businesses, apartments, and farms across Kenya.{' '}
+          <strong>Fast installation. Professional support. Trusted across Kenya.</strong>
         </p>
         <p className="hero__why-label">Why us?</p>
         <ul className="hero__bullets">
