@@ -21,9 +21,25 @@ const FAQItem: React.FC<{ q: string; a: string; defaultOpen?: boolean }> = ({ q,
 /* ── Contact form ── */
 const ContactForm: React.FC = () => {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
+    const fd = new FormData(e.currentTarget);
+    await fetch('/api/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name:    fd.get('name'),
+        email:   fd.get('email'),
+        phone:   fd.get('phone'),
+        company: fd.get('company'),
+        service: fd.get('service'),
+        message: fd.get('details'),
+      }),
+    }).catch(() => {});
+    setLoading(false);
     setSent(true);
   };
 
@@ -39,23 +55,23 @@ const ContactForm: React.FC = () => {
     <form className="contact-form" onSubmit={handleSubmit}>
       <div className="form-group">
         <label htmlFor="name">Name</label>
-        <input id="name" type="text" placeholder="Your full name" required />
+        <input id="name" name="name" type="text" placeholder="Your full name" required />
       </div>
       <div className="form-group">
         <label htmlFor="company">Company</label>
-        <input id="company" type="text" placeholder="Company name" />
+        <input id="company" name="company" type="text" placeholder="Company name" />
       </div>
       <div className="form-group">
         <label htmlFor="email">Email</label>
-        <input id="email" type="email" placeholder="you@company.com" required />
+        <input id="email" name="email" type="email" placeholder="you@company.com" required />
       </div>
       <div className="form-group">
         <label htmlFor="phone">Phone number</label>
-        <input id="phone" type="tel" placeholder="+254 700 000 000" />
+        <input id="phone" name="phone" type="tel" placeholder="+254 700 000 000" />
       </div>
       <div className="form-group">
         <label htmlFor="service">What are you interested in?</label>
-        <select id="service">
+        <select id="service" name="service">
           <option value="">Pick a service</option>
           <option>Managed IT services</option>
           <option>Cyber security</option>
@@ -67,9 +83,11 @@ const ContactForm: React.FC = () => {
       </div>
       <div className="form-group">
         <label htmlFor="details">Briefly describe the challenge you are facing</label>
-        <textarea id="details" rows={4} placeholder="Tell us more about your needs..." />
+        <textarea id="details" name="details" rows={4} placeholder="Tell us more about your needs..." />
       </div>
-      <button type="submit" className="btn btn--primary btn--full">Get Help Now</button>
+      <button type="submit" className="btn btn--primary btn--full" disabled={loading}>
+        {loading ? 'Sending…' : 'Get Help Now'}
+      </button>
     </form>
   );
 };

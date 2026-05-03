@@ -3,9 +3,24 @@ import { Reveal } from '../shared';
 
 const RequestCallbackPage: React.FC = () => {
   const [sent, setSent] = useState(false);
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    setLoading(true);
+    const fd = new FormData(e.currentTarget);
+    await fetch('/api/send', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({
+        name:    fd.get('name'),
+        email:   fd.get('email'),
+        phone:   fd.get('phone'),
+        service: fd.get('service'),
+        message: fd.get('message'),
+      }),
+    }).catch(() => {});
+    setLoading(false);
     setSent(true);
   };
 
@@ -51,20 +66,20 @@ const RequestCallbackPage: React.FC = () => {
               <div className="callback__form-row">
                 <div className="callback__field">
                   <label>Name *</label>
-                  <input type="text" required placeholder="Your name" />
+                  <input type="text" name="name" required placeholder="Your name" />
                 </div>
                 <div className="callback__field">
                   <label>Telephone Number</label>
-                  <input type="tel" placeholder="+254 700 000 000" />
+                  <input type="tel" name="phone" placeholder="+254 700 000 000" />
                 </div>
               </div>
               <div className="callback__field">
                 <label>Corporate Email *</label>
-                <input type="email" required placeholder="you@company.com" />
+                <input type="email" name="email" required placeholder="you@company.com" />
               </div>
               <div className="callback__field">
                 <label>Service Interested In</label>
-                <select>
+                <select name="service">
                   <option value="">Select a service</option>
                   <option>Electrical Infrastructure</option>
                   <option>ICT Network Infrastructure</option>
@@ -76,7 +91,7 @@ const RequestCallbackPage: React.FC = () => {
               </div>
               <div className="callback__field">
                 <label>Would you like to give us more details?</label>
-                <textarea rows={4} placeholder="Tell us about your project..." />
+                <textarea name="message" rows={4} placeholder="Tell us about your project..." />
               </div>
               <label className="callback__consent">
                 <input type="checkbox" />
@@ -85,7 +100,9 @@ const RequestCallbackPage: React.FC = () => {
               <p className="callback__legal">
                 You agree that Keedco may process your personal data as described in our privacy policy.
               </p>
-              <button type="submit" className="callback__submit">SEND ENQUIRY</button>
+              <button type="submit" className="callback__submit" disabled={loading}>
+                {loading ? 'SENDING…' : 'SEND ENQUIRY'}
+              </button>
             </form>
           )}
         </Reveal>
