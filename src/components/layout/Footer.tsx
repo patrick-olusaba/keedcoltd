@@ -86,13 +86,16 @@ const Footer: React.FC = () => {
       <div className="footer__cta">
         <div className="container footer__cta-inner">
           <div>
-            <p className="footer__cta-title">Ready to power your infrastructure?</p>
-            <p className="footer__cta-sub">Get a free consultation — no obligation.</p>
+            <p className="footer__cta-title">Ready to Get Started?</p>
+            <p className="footer__cta-sub">We're ready to handle your ICT, electrical or security project — from small setups to large installations.</p>
           </div>
-          <a href="#" className="btn btn--book" onClick={(e) => { e.preventDefault(); navigate('get-started'); }}>
-            Book a meeting now
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5"><circle cx="12" cy="12" r="10"/><polyline points="12 8 16 12 12 16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
-          </a>
+          <div style={{ display: 'flex', gap: '12px', flexWrap: 'wrap' }}>
+            <a href="tel:+254720119984" className="btn btn--book">📞 Call Now</a>
+            <a href="https://wa.me/254715119984" target="_blank" rel="noopener noreferrer" className="btn btn--book">💬 WhatsApp</a>
+            <a href="#" className="btn btn--book" onClick={(e) => { e.preventDefault(); navigate('get-started'); }}>
+              📩 Get Quote
+            </a>
+          </div>
         </div>
       </div>
 

@@ -7,7 +7,8 @@ const POINTS = [
   { title: 'Built for Kenya.',                body: 'Designed for local power fluctuations, tropical climate, and security needs.' },
   { title: 'Future-proof by design.',         body: 'Systems that grow with you, not obsolete in two years.' },
   { title: 'Consult before you commit.',      body: 'We audit first, so you never over-pay or under-spec.' },
-  { title: 'Local team, fast response.',      body: 'Based in Kenya, ready when you need us.' },
+  { title: 'Fast response guaranteed.',       body: 'Based in Kenya, on-site fast when you need us.' },
+  { title: 'Professional installation with ongoing support.', body: 'We show up, we deliver, we support.' },
 ];
 
 const WhyKeedCo: React.FC = () => {

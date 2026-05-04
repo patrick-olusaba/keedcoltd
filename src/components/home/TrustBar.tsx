@@ -1,8 +1,9 @@
 import React from 'react';
 
 const STATS = [
-  { value: '10+', label: 'Years Experience' },
-  { value: '100+', label: 'Projects Completed' },
+  { value: '10+',   label: 'Years Experience' },
+  { value: '100+',  label: 'Projects Completed' },
+  { value: 'Fast',  label: 'On-Site Support' },
   { value: 'Nairobi', label: '& Across Kenya' },
 ];
 

@@ -6,19 +6,19 @@ const SEGMENTS = [
   {
     icon: '🏢',
     title: 'Offices & Businesses',
-    body: 'Network setup, IT support, structured cabling, CCTV, and access control — keeping your team connected and your premises secure.',
+    body: 'Reliable IT networks, CCTV and electrical support for smooth operations.',
     tags: ['Network setup', 'IT support', 'Structured cabling'],
   },
   {
     icon: '🏠',
     title: 'Apartments & Real Estate',
-    body: 'CCTV, intercom systems, access control, electrical works, and WiFi distribution for residential developments of any size.',
+    body: 'Complete electrical and security installations for residential projects.',
     tags: ['CCTV', 'Intercom', 'Access control', 'Electrical'],
   },
   {
     icon: '🌾',
     title: 'Farms & Large Compounds',
-    body: 'Solar-powered CCTV, perimeter security, long-range wireless links, and electrical infrastructure for rural and large-area properties.',
+    body: 'Solar CCTV, wireless connectivity and perimeter security.',
     tags: ['Solar CCTV', 'Perimeter security', 'Wireless links'],
   },
 ];

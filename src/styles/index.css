@@ -3081,3 +3081,80 @@ input, select, textarea, button { font-family: inherit; }
 
 @media (max-width: 900px) { .recent-projects__grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 520px) { .recent-projects__grid { grid-template-columns: repeat(2, 1fr); gap: 8px; } }
+
+
+/* ── Hero trust line ── */
+.hero__trust-line {
+  color: #a8f0c6;
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin: -8px 0 20px;
+}
+
+/* ── CTA Nudge (between sections) ── */
+.cta-nudge {
+  background: var(--grey-bg);
+  padding: 28px 32px;
+  text-align: center;
+}
+.cta-nudge p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--navy);
+  margin-bottom: 14px;
+}
+.cta-nudge__btns {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.btn--whatsapp {
+  background: #25d366;
+  color: #fff;
+  padding: 10px 22px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.btn--whatsapp:hover { background: #1ebe5d; color: #fff; }
+.btn--outline {
+  background: transparent;
+  color: var(--navy);
+  border: 2px solid var(--navy);
+  padding: 10px 22px;
+  border-radius: var(--radius);
+  font-weight: 600;
+  font-size: 0.9rem;
+}
+.btn--outline:hover { background: var(--navy); color: #fff; }
+
+/* ── Final CTA Section ── */
+.final-cta {
+  background: var(--navy);
+  padding: 72px 0;
+  text-align: center;
+}
+.final-cta__inner { max-width: 680px; margin: 0 auto; }
+.final-cta__title {
+  color: #fff;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 700;
+  margin-bottom: 12px;
+}
+.final-cta__sub {
+  color: rgba(255,255,255,0.75);
+  font-size: 1rem;
+  margin-bottom: 32px;
+}
+.final-cta__btns {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 20px;
+}
+.final-cta__nudge {
+  color: rgba(255,255,255,0.55);
+  font-size: 0.88rem;
+}
