@@ -1,7 +1,7 @@
 import React from 'react';
 
 const STATS = [
-  { value: '10+',   label: 'Years Experience' },
+  { value: '15+',   label: 'Years Experience' },
   { value: '100+',  label: 'Projects Completed' },
   { value: 'Fast',  label: 'On-Site Support' },
   { value: 'Nairobi', label: '& Across Kenya' },
@@ -33,7 +33,6 @@ const TrustBar: React.FC = () => (
           <div key={c.name} className="trust-bar__cert-item">
             <img src={c.logo} alt={c.name} loading="lazy"
               onError={(e) => { (e.target as HTMLImageElement).style.display = 'none'; }} />
-            <span>{c.name}</span>
           </div>
         ))}
       </div>
