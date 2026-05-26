@@ -8,6 +8,8 @@ const ChevronDown = () => (
   </svg>
 );
 
+
+
 const Navbar: React.FC = () => {
   const [scrolled, setScrolled] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
