@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
     <nav className={`navbar${scrolled ? ' navbar--scrolled' : ''}`}>
       <div className="navbar__inner">
         <a href="#" className="navbar__logo" onClick={(e) => handleNav(e, 'home')}>
-          <img src="https://keedcoltd.com/wp-content/uploads/2023/05/Keedco-Logo-Final-2-2.png" alt="KeedCo" height="40" />
+          <img src="/Keedco_Logo.jpg" alt="KeedCo" height="40" />
         </a>
 
         <ul className="navbar__links">
